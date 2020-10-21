@@ -42,7 +42,7 @@ learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
 loop.close()
 
 PREDICTION_FILE_SRC = path/'static'/'predictions.txt'
-
+ 
 @app.route("/upload", methods=["POST"])
 async def upload(request):
     form = await request.form()
